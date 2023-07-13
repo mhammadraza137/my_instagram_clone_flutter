@@ -12,7 +12,6 @@ class AuthMethods {
     User user = _auth.currentUser!;
      DocumentSnapshot snapshot = await _firestore.collection('users').doc(user.uid).get();
      // if(snapshot.data() != null){
-    print('user uid : ${user.uid}');
     print('snapshot : $snapshot');
 
        return model.User.fromSnap(snapshot);
